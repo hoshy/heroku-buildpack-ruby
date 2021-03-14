@@ -10,8 +10,7 @@ else
   # v3 API
   APP_DIR=$(pwd)
 fi
-
-if [ -f "$APP_DIR/Gemfile" ] || [ -n $(find $APP_DIR -name "Gemfile") ]; then
+if test -n $(find ${APP_DIR} -name 'Gemfile' -quit -print); then
   echo "Ruby"
   exit 0
 else
