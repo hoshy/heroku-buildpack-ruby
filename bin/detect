@@ -11,7 +11,7 @@ else
   APP_DIR=$(pwd)
 fi
 
-if [ -f "$APP_DIR/Gemfile" ]; then
+if [ -f "$APP_DIR/Gemfile" ] || [ -f "$APP_DIR/plano-app/Gemfile" ] || [ -f "$APP_DIR/apps/plano-api/Gemfile" ] || [ -f "$APP_DIR/engines/core/Gemfile" ]; then
   echo "Ruby"
   exit 0
 else
